@@ -1,4 +1,5 @@
 import { WidgetsRounded, Mail, Notifications } from '@mui/icons-material';
+import { Link as RouterLink  } from 'react-router-dom';
 import { AppBar, styled, Toolbar, Typography, Box, InputBase, Badge, IconButton, Avatar, Menu, MenuItem } from '@mui/material';
 import { deepOrange } from '@mui/material/colors';
 import React, { useState } from 'react';
@@ -60,7 +61,7 @@ function Navbar(props) {
                     >
                         <MenuItem>Profile</MenuItem>
                         <MenuItem>My account</MenuItem>
-                        <MenuItem>Logout</MenuItem>
+                        <MenuItem><RouterLink to="/"> Logout </RouterLink></MenuItem>
                     </Menu>
             </HeaderIcons>
         </StyledToolbar> 

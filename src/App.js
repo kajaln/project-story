@@ -1,9 +1,15 @@
 import {Settings } from '@mui/icons-material';
 import { Box, Button, Stack, styled } from '@mui/material';
+import { Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Feed from './components/Feed';
 import Rightbar from './components/Rightbar';
 import Navbar from './components/Navbar';
+import SignIn from './pages/auth/SignIn';
+import Auth from './pages/auth/Auth';
+import SignUp from './pages/auth/SignUp';
+import Project from './pages/projects/Project';
+
 
 function App() {
   const PrimaryButton =  styled(Button)(({theme}) => ({
@@ -16,13 +22,11 @@ function App() {
   }));
   return (
     <Box>
-      <Navbar />
-      <Stack direction='row' justifyContent='space-between'>
+      <Routes>
+        <Route path="/" element={<Auth />} />
+        <Route path="projects" element={ <Project /> } />
+      </Routes>
       
-        <Sidebar />
-        <Feed />
-        <Rightbar />
-      </Stack>
     </Box>
   );
 }
